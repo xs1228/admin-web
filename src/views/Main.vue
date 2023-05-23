@@ -1,10 +1,12 @@
 <template>
   <div class="common-layout">
     <el-container>
-      <el-aside width="200px">左侧菜单</el-aside>
+      <el-aside class="el-aside">
+        <home-aside></home-aside>
+      </el-aside>
       <el-container>
-        <el-header>
-          <common-header/>
+        <el-header class="el-header">
+          <home-header />
         </el-header>
         <el-main>
           <router-view />
@@ -14,11 +16,21 @@
   </div>
 </template>
 <script setup lang="ts">
-import commonHeader from '@/components/common/Header.vue'
+import homeHeader from "@/components/home/Header.vue";
+import homeAside from "@/components/home/Aside.vue";
+
 </script>
-<style scoped>
+<style lang="scss" scoped>
 .common-layout {
-  /* width: 100%;
-  height: 100%; */
+  height: 100vh;
+  .el-aside{
+    display: inline-block;
+    background-color: #fff;
+    width: auto;
+  }
+  .el-header{
+    background-color: #fff;
+    height: auto;
+  }
 }
 </style>
