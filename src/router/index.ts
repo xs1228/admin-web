@@ -1,22 +1,11 @@
-import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
-
-const routes = [
-  {
-    path: "/",
-    component: () => import("@/views/Main.vue"),
-    children: [
-      {
-        path: "/",
-        name: "home",
-        component: () => import("@/views/home/Home.vue"),
-      },
-    ],
-  },
-];
+import { createRouter, createWebHashHistory } from "vue-router";
+import routes from "./modules";
 
 const router = createRouter({
   history: createWebHashHistory(),
-  routes: [...routes] as RouteRecordRaw[],
+  routes: [...routes],
+  // 切换页面，滚动到最顶部
+  scrollBehavior: () => ({ left: 0, top: 0 }),
 });
 
 export default router;

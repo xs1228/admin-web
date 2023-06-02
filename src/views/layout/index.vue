@@ -2,11 +2,11 @@
   <div class="common-layout">
     <el-container>
       <el-aside class="el-aside">
-        <home-aside></home-aside>
+        <layout-aside></layout-aside>
       </el-aside>
       <el-container>
         <el-header class="el-header">
-          <home-header />
+          <layout-header />
         </el-header>
         <el-main>
           <router-view />
@@ -16,8 +16,8 @@
   </div>
 </template>
 <script setup lang="ts">
-import homeHeader from "@/components/home/Header.vue";
-import homeAside from "@/components/home/Aside.vue";
+import layoutHeader from "./components/Header.vue";
+import layoutAside from "./components/Aside.vue";
 
 </script>
 <style lang="scss" scoped>

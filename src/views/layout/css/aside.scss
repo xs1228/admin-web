@@ -1,0 +1,28 @@
+.aside {
+  height: 100vh;
+  background-color: #fff;
+
+  .el-menu-vertical {
+    height: 100vh;
+    .logo {
+      padding: 18px 0;
+      width: 100%;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  .el-menu-vertical:not(.el-menu--collapse) {
+    width: 240px;
+  }
+}
+
+.title {
+  color: #333;
+}
+.is-active:not(.el-sub-menu) {
+  background-color: #e8fbfb;
+  color: #14d9d9;
+}
