@@ -18,7 +18,7 @@
 <script setup lang="ts" name="login">
 import LoginForm from "./components/LoginForm.vue";
 import { LoginFormExpose } from "./interface/index";
-import { Login } from "@/api/interface/index";
+import { Login } from "@/api/interface/login";
 import { ref, reactive, provide } from "vue";
 
 // * 以下数据都为自己测试使用，不参与功能开发
@@ -54,11 +54,11 @@ const loginRef = ref<LoginFormExpose | null>(null);
 // const item1 = ref<number>(111);
 
 const obj = reactive<Login.ReqLoginForm>({
-	username: "admin",
+	name: "admin",
 	password: "123456"
 });
 // 使用toRefs解构数据（在template中直接用）
-// const { username, password } = toRefs(obj);
+// const { name, password } = toRefs(obj);
 </script>
 
 <style scoped lang="scss">
